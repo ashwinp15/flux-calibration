@@ -22,6 +22,19 @@ dedisperse J1939+2134_58804.421650_1460.norfix.fil -d 71.025634765625 -b 16 -nob
 For generating profile from the quasar filterbank file, the dispersion measure doesn't matter but the fold period (value of the ``p`` flag) 
 should be the same as that used for the pulsar.
 
+### Usage
+
+The paths to the prepared files needs to be edited into the corresponding lines in the script:
+```python
+# Reading the quasar files. 
+onSrc_3C286 = pd.read_csv("path/to/3C286_dedispersed_folded.txt", header=None, delim_whitespace=True)
+offSrc_3C286 = pd.read_csv("path/to/3C286OFF_dedispersed_folded.txt", header=None, delim_whitespace=True)
+
+# Reading the pulsar files.
+J1939_data = pd.read_csv("path/to/J1939_dedispersed_folded.txt", header=None, delim_whitespace=True)
+```
+
+
 
 
 
